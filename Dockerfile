@@ -1,21 +1,9 @@
-FROM ubuntu:20.10
+FROM qmcgaw/latexdevcontainer
 
-RUN export DEBIAN_FRONTEND=noninteractive
-RUN ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-
-RUN apt-get update && apt-get upgrade -y && apt-get install -y \
-        texlive \
-        texlive-base \
-        texlive-lang-german \
-        texlive-latex-extra \
-        lmodern \
-        git
-
-RUN git clone https://github.com/maknesium/latex-vorlage-diplom-bachelor-masterarbeiten.git app
-
-VOLUME /app/src
-
-RUN cd /app/scripts
-WORKDIR /app/scripts
-
-ENTRYPOINT ["/app/scripts/generatePdf.sh"]
+RUN apt update && apt install -y lmodern && \
+    tlmgr repository remove http://ctan.math.utah.edu/ctan/tex-archive/systems/texlive/tlnet && \
+    tlmgr repository add https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/2021/tlnet-final/ && \
+    tlmgr update --self && \
+    tlmgr install \
+        latexindent latexmk \
+        collection-latexextra collection-langgerman

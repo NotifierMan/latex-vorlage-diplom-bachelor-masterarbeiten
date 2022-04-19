@@ -60,9 +60,7 @@ Unter Windows habe ich persönlich [TeXlipse](http://texlipse.sourceforge.net/ "
 
 ### Docker
 
-Man kann die Umgebung zum Erstellen der PDFs auch in einem Docker-Container laufen lassen. Hierfür kann das [Dockerfile](/Dockerfile) genutzt werden.
-
-Das Docker-Image kann z.B. mit dem Befehl `docker build -t maknesium/latexvorlage:latest` erstellt werden. Der Container wird anschließend mit `docker run -d --name latexvorlage-container -v /pfad/zum/ordner/src:/app/src maknesium/latexvorlage:latest` erstellt. Der Container bleibt nach dem Bauen vorhanden, muss also für ein neues Kompilieren der tex-Dateien nur per `docker start latexvorlage-container` gestartet werden.
+Auf Basis [dieser Anleitung](https://towardsdatascience.com/three-ways-to-create-dockernized-latex-environment-2534163ee0c4) wurde ein Docker-Image für VSCode erstellt, den man als "Dev-Container" verwenden kann. Um das Docker-Image zu bauen, führt man einfach `make docker` aus. Anschließend kann man dieses Projekt in VSCode mit der Erweiterung ["Remote - Containers"](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) öffnen.
 
 ### LaTeX Workshop Extension für Visual Studio Code
 
