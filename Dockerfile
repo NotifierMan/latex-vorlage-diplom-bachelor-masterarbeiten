@@ -6,4 +6,6 @@ RUN apt update && apt install -y lmodern && \
     tlmgr update --self && \
     tlmgr install \
         latexindent latexmk \
-        collection-latexextra collection-langgerman
+        collection-latexextra collection-langgerman \
+        eurosym && \
+    texhash

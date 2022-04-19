@@ -24,6 +24,7 @@
         "latex-workshop.chktex.enabled": true,
         "latex-workshop.latex.autoBuild.run": "onSave",
         "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.latex.outDir": "/workspace/out/",
         "latex-workshop.latex.clean.subfolder.enabled": true,
         "latex-workshop.latex.search.rootFiles.include": [
             "src/Hauptdatei.tex"
