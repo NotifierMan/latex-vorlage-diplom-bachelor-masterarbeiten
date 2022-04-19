@@ -6,5 +6,5 @@ install_docker-compose:
 
 docker:
 	docker build \
-		-t latex:${USER} \
+		-t notifierman/latex:2021 \
 		.
