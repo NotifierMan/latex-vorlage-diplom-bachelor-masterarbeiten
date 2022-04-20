@@ -1,4 +1,4 @@
-# gitignore for latex-template project
+# gitignore
 out/*.ilg
 out/*.lol
 out/*.nlo
