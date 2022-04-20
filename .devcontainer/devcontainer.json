@@ -13,13 +13,15 @@
     "postCreateCommand": "",
     "extensions": [
         "james-yu.latex-workshop",
-        // Other helpers
         "shardulm94.trailing-spaces",
-        "stkb.rewrap", // rewrap comments after n characters on one line
     ],
     "settings": {
         // General settings
+        "editor.formatOnSave": true,
         "files.eol": "\n",
+        "files.associations": {
+            "*.tex": "latex"
+        },
         // Latex settings
         "latex-workshop.chktex.enabled": true,
         "latex-workshop.latex.autoBuild.run": "onSave",
@@ -27,17 +29,8 @@
         "latex-workshop.latex.outDir": "/workspace/out/",
         "latex-workshop.latex.clean.subfolder.enabled": true,
         "latex-workshop.latex.search.rootFiles.include": [
-            "src/Hauptdatei.tex"
+            "src/*.tex"
         ],
-        "editor.formatOnSave": true,
-        "files.associations": {
-            "*.tex": "latex"
-        },
-        "latex-workshop.latexindent.args": [
-            "-c",
-            "%DIR%/",
-            "%TMPFILE%",
-            "-y=\"defaultIndent: '%INDENT%',onlyOneBackUp: 1\"",
-        ]
+        "trailing-spaces.trimOnSave": true,
     }
 }

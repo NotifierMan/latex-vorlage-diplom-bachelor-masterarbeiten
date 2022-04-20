@@ -29,7 +29,7 @@
 \usepackage{longtable}
 
 % Unterstützung für Schriftarten
-%\newcommand{\changefont}[3]{ 
+%\newcommand{\changefont}[3]{
 %\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
 
 % Packet für Seitenrandabständex und Einstellung für Seitenränder
@@ -83,7 +83,7 @@
 \usepackage{setspace}
 
 % für Bildbezeichner
-\usepackage{capt-of}
+\usepackage{capt-of} %chktex 8
 
 % für Stichwortverzeichnis
 \usepackage{makeidx}
@@ -111,11 +111,11 @@
 \lstset{language=java}
 
 % Indexerstellung
-\makeindex
+\makeindex{}
 
 % Abkürzungsverzeichnis
 \usepackage[german]{nomencl}
-\let\abbrev\nomenclature
+\let\abbrev\nomenclature{}
 
 % Abkürzungsverzeichnis LiveTex Version
 % Titel des Abkürzungsverzeichnisses
@@ -127,7 +127,7 @@
 % Variation des Abstandes der einzelnen Abkürzungen zu einander
 \setlength{\nomitemsep}{-\parsep}
 % Index mit Abkürzungen erzeugen
-\makenomenclature
+\makenomenclature{}
 %\makeglossary
 
 % Abkürzungsverzeichnis TeTEX Version
@@ -156,7 +156,7 @@
 % Leere Seite am Anfang
 \thispagestyle{empty} % erzeugt Seite ohne Kopf- / Fusszeile
 \mbox{}
-\newpage
+\newpage{}
 
 % Titelseite %
 \input{latex_einstellungen/deckblatt}
@@ -165,35 +165,35 @@
 \pagenumbering{roman}
 
 % 1.5 facher Zeilenabstand
-\onehalfspacing
+\onehalfspacing{}
 
-\newpage
+\newpage{}
 
 % Sperrvermerk
 \thispagestyle{empty}
 \input{sperrvermerk}
 
-\newpage
+\newpage{}
 
 % Einleitung / Abstract
 \thispagestyle{empty}
 \input{0_abstract}
 
 % einfacher Zeilenabstand
-\singlespacing
+\singlespacing{}
 
-\newpage
+\newpage{}
 % Seitenzählung bei Inhaltsverzeichnis beginnen
 \setcounter{page}{1}
 
 % Inhaltsverzeichnis anzeigen
 \thispagestyle{empty}
-\tableofcontents
+\tableofcontents{}
 
-\newpage
+\newpage{}
 % das Abbildungsverzeichnis
 % Verion 1: Abbildungsverzeichnis MIT führender Nummberierung endgueltig anzeigen
-\listoffigures
+\listoffigures{}
 % Abbildungsverzeichnis soll im Inhaltsverzeichnis auftauchen
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
 
@@ -205,10 +205,10 @@
 
 
 % das Tabellenverzeichnis
-\newpage
+\newpage{}
 % \fancyhead[L]{Abbildungsverzeichnis / Abkürzungsverzeichnis} %Kopfzeile links
 % Tabellenverzeichnis endgültig anzeigen
-\listoftables
+\listoftables{}
 % Tabellenverzeichnis soll im Inhaltsverzeichnis auftauchen
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 
@@ -231,16 +231,16 @@
 %}
 %\makeatother% --> \makeatletter
 % das Listingverzeichnis
-\newpage
+\newpage{}
 \fancyhead[L]{Listingverzeichnis} %Kopfzeile links
 \renewcommand{\lstlistlistingname}{Listingverzeichnis}
-\lstlistoflistings
+\lstlistoflistings{}
 % Listingverzeichnis soll im Inhaltsverzeichnis auftauchen
 \addcontentsline{toc}{section}{Listingverzeichnis}
 %%%%
 
 % das Abkürzungsverzeichnis
-\newpage
+\newpage{}
 % das Abkürzungsverzeichnis ausgeben
 \fancyhead[L]{Abkürzungsverzeichnis} %Kopfzeile links
 \input{latex_einstellungen/abkuezungen/abkuerzungen}
@@ -250,11 +250,11 @@
 
 
 %%%%%%% EINLEITUNG %%%%%%%%%%%%
-\newpage
+\newpage{}
 \fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
 
 % 1,5 facher Zeilenabstand
-\onehalfspacing
+\onehalfspacing{}
 
 % arabische Seitennummerierung ab hier
 \pagenumbering{arabic}
@@ -269,29 +269,29 @@
 
 % einzelne Kapitel werden hier eingebunden
 \input{1_einleitung}
-\newpage
+\newpage{}
 
 \input{2_kap1}
-\newpage
+\newpage{}
 
 \input{3_kap2}
-\newpage
+\newpage{}
 
 % hier können weitere Kapitel angelegt und eingetragen werden
 % ....
 
 \input{7_ausblick}
-\newpage
+\newpage{}
 
 \input{8_fazit}
 
 \input{beispiel}
 
 % einfacher Zeilenabstand
-\singlespacing
+\singlespacing{}
 % Literaturliste soll im Inhaltsverzeichnis auftauchen
-\newpage
-\phantomsection
+\newpage{}
+\phantomsection{}
 \addcontentsline{toc}{section}{Literaturverzeichnis}
 % Literaturverzeichnis anzeigen
 \renewcommand\refname{Literaturverzeichnis}
@@ -305,22 +305,22 @@
 % % Stichwortverzeichnis endgültig anzeigen
 % \printindex
 
-\onehalfspacing
+\onehalfspacing{}
 % evtl. Anhang
-\newpage
-\phantomsection
+\newpage{}
+\phantomsection{}
 \addcontentsline{toc}{section}{Anhang}
 \fancyhead[L]{Anhang} %Kopfzeile links
 \input{anhang/anhang}
 
 % Eidesstattliche Erklärung
-\newpage
-\phantomsection
+\newpage{}
+\phantomsection{}
 \addcontentsline{toc}{section}{Eidesstattliche Erklärung}
 \input{erklaerung}
 
 % leere Abschlussseite
-\newpage
+\newpage{}
 \thispagestyle{empty} % erzeugt Seite ohne Kopf- / Fusszeile
 \mbox{}
 

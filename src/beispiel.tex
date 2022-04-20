@@ -1,30 +1,30 @@
 % Beispiel für Bild mit Fußnote
 \begin{figure}[htb]
- \centering
- \includegraphics[width=0.4\textwidth,angle=45]{abb/logo1}
- \caption[Beispiel einer Bildbeschreibung]{Beispiel einer Bildbeschreibung\footnotemark}
-\label{fig:beispiel1}
+  \centering{}
+  \includegraphics[width=0.4\textwidth,angle=45]{abb/logo1}
+  \caption[Beispiel einer Bildbeschreibung]{Beispiel einer Bildbeschreibung\footnotemark}
+  \label{fig:beispiel1}
 \end{figure}
 \footnotetext{Bildquelle: Beispiel einer Bildquelle}
 
 % Beispiel für Bildintegration
 \begin{figure}[htb]
- \centering
- \includegraphics[width=0.3\textwidth,angle=0]{abb/logo2}
- \caption[Beschreibung]{Beschreibung}
-\label{fig:Beschreibung}
+  \centering{}
+  \includegraphics[width=0.3\textwidth,angle=0]{abb/logo2}
+  \caption[Beschreibung]{Beschreibung}
+  \label{fig:Beschreibung}
 \end{figure}
 
 % Beispiel: Referenz auf Abbildung
 Abbildung~\ref{fig:Beschreibung} [S.\pageref{fig:Beschreibung}]
 
-% Beispiel: Tabelle 
+% Beispiel: Tabelle
 \begin{center}
   \begin{tabular}{ | l | c | }
     \hline
-    Überschrift 1 & Überschrift 2 \\ \hline \hline
-    Info 1 & Info 2 \\ \hline
-    Info 3 & Info 4 \\ \hline
+    Überschrift 1 & Überschrift 2             \\ \hline \hline
+    Info 1        & Info 2                    \\ \hline
+    Info 3        & Info 4                    \\ \hline
     \hline
     \multicolumn{2}{|c|}{Info in einer Zelle} \\
     \hline
@@ -36,10 +36,10 @@ Abbildung~\ref{fig:Beschreibung} [S.\pageref{fig:Beschreibung}]
 \lstset{language=xml}
 \begin{lstlisting}[frame=htrbl, caption={Die Datei {\normalfont \ttfamily  data-config.xml} dient als Beispiel für XML Quellcode}, label={lst:dataconfigxml}]
 <dataConfig>
-  <dataSource type="JdbcDataSource" 
+  <dataSource type="JdbcDataSource"
               driver="com.mysql.jdbc.Driver"
               url="jdbc:mysql://localhost/bms_db"
-              user="root" 
+              user="root"
               password=""/>
   <document>
     <entity name="id"
@@ -63,16 +63,16 @@ Cloud cloud = new Cloud();
 cloud.setMaxWeight(_maxSizeOfText);
 cloud.setMinWeight(_minSizeOfText);
 cloud.setTagCase(Case.LOWER);
-	    
+
 /* evaluate context and find additional stopwords */
 String query = getContextQuery(_context);
 List<String> contextStoplist = new ArrayList<String>();
 contextStoplist = getStopwordsFromDB(query);
-	    
+
 /* append context stoplist */
 while(contextStoplist != null && !contextStoplist.isEmpty())
   _stoplist.add(contextStoplist.remove(0));
-	    
+
 /* add cloud filters */
 if (_stoplist != null) {
   DictionaryFilter df = new DictionaryFilter(_stoplist);
@@ -89,18 +89,18 @@ cloud.addInputFilter(mlf);
 /* add taglist to tagcloud */
 cloud.addText(_taglist);
 
-/* set number of shown tags */	    
+/* set number of shown tags */
 cloud.setMaxTagsToDisplay(_tagsToDisplay);
 \end{lstlisting}
 
 
 % Beispiel für Formeln
-Die Zuordnung aller möglichen Werte, welche eine Zufallsvariable annehmen kann nennt man \emph{Verteilungsfunktion} von $X$.
+Die Zuordnung aller möglichen Werte, welche eine Zufallsvariable annehmen kann nennt man \emph{Verteilungsfunktion} von \( X \).
 
 \begin{quotation}
-Die Funktion F: $\mathbb{R} \rightarrow$ [0,1] mit $F(t) = P (X \le t)$ heißt Verteilungsfunktion von $X$.\footnote{Mustermann, vgl.~\cite{mm2009}~[S.55]}
+  Die Funktion F:\@ \( \mathbb{R} \rightarrow \) [0,1] mit \( F(t) = P (X \le t) \) heißt Verteilungsfunktion von \( X \).\footnote{Mustermann, vgl.~\cite{mm2009}~[S.55]}
 \end{quotation}
 
 \begin{quotation}
-Für eine stetige Zufallsvariable $X: \Omega \rightarrow \mathbb{R}$ heißt eine integrierbare, nichtnegative reelle Funktion $w: \mathbb{R} \rightarrow \mathbb{R}$ mit $F(x) = P(X \le x) = \int_{-\infty}^{x} w(t)dt$ die \emph{Dichte} oder \emph{Wahrscheinlichkeitsdichte} der Zufallsvariablen $X$.\footnote{Mustermann, vgl.~\cite{mf2005}~[S.56]}
+  Für eine stetige Zufallsvariable \( X: \Omega \rightarrow \mathbb{R} \) heißt eine integrierbare, nichtnegative reelle Funktion \( w: \mathbb{R} \rightarrow \mathbb{R} \) mit \( F(x) = P(X \le x) = \int_{-\infty}^{x} w(t)dt \) die \emph{Dichte} oder \emph{Wahrscheinlichkeitsdichte} der Zufallsvariablen \( X \).\footnote{Mustermann, vgl.~\cite{mf2005}~[S.56]}
 \end{quotation}
