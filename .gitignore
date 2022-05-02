@@ -1,5 +1,5 @@
 # gitignore
-out/*.ilg
-out/*.lol
-out/*.nlo
-out/*.synctex.gz
+src/*.ilg
+src/*.lol
+src/*.nlo
+src/*.synctex.gz
